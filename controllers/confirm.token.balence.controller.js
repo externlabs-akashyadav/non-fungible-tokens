@@ -15,9 +15,11 @@ async function confirmtokenbalence() {
     command: "account_lines",
     account: hot_wallet.address,
     ledger_index: "validated",
+    hotwallet: [cold_wallet.address],
   });
 
   console.log(hot_balances.result);
+  // console.log(JSON.stringify(hot_balances.result, null, 2));
 
   console.log("Getting cold address balances...");
 
@@ -27,7 +29,8 @@ async function confirmtokenbalence() {
     ledger_index: "validated",
     hotwallet: [hot_wallet.address],
   });
-  console.log(JSON.stringify(cold_balances.result, null, 2));
+  // console.log(JSON.stringify(cold_balances.result, null, 2));
+  console.log(cold_balances.result);
 
   client.disconnect();
 }
