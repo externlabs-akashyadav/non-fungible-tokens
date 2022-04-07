@@ -29,7 +29,14 @@ async function getBalHot() {
     }
   );
 
-  console.log(hot_balances.result);
+  // const balence = hot_balances.result;
+
+  // console.log("Balence is: ", balence);
+  // let objkey = Object.keys(hot_balances);
+  // console.log(objkey["lines"]);
+  // console.log(hot_balances["result"]["balance"]);
+  // let x = hot_balances.result["lines"][0]["balance"];
+  console.log("Balence is:", hot_balances.result["lines"][0]["balance"]);
 }
 
 module.exports = { getBalHot };

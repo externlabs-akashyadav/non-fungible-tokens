@@ -12,6 +12,7 @@ const getbalenceColdController = require("../controllers/getbalence.cold.control
 // router.post("/", connectionController.main);
 const getBalHotController = require("../controllers/getbalhot.controller");
 const coldTrancController = require("../controllers/transction");
+const historyController = require("../controllers/histroy");
 
 router.post("/cold-setting/", configureIssureController.cold_settings);
 router.post("/hot-setting/", configureHotController.hot_settings);
@@ -31,5 +32,6 @@ router.post("/get-bal-cold/", getbalenceColdController.getBalCold);
 router.post("/get-bal-hot/", getBalHotController.getBalHot);
 
 router.post("/cold-tranc-bal/", coldTrancController.tranction);
+router.post("/history/", historyController.history);
 
 module.exports = router;

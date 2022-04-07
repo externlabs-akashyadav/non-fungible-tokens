@@ -8,7 +8,7 @@ const cold_wallet = xrpl.Wallet.fromSeed(process.env.COLD_SECRET);
 // console.log("wallet DatA cold: ", cold_wallet.address);
 
 // Create trust line from hot to cold address --------------------------------
-const currency_code = "FOO";
+const currency_code = "USD";
 const trust_set_tx = {
   TransactionType: "TrustSet",
   Account: hot_wallet.address,
